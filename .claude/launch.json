@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "webseite",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/vorschau.mjs"],
+      "port": 4010
+    }
+  ]
+}

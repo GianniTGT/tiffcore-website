@@ -1,0 +1,4 @@
+# Einheitliche Zeilenenden, egal ob unter Windows oder Linux bearbeitet
+* text=auto eol=lf
+*.svg text eol=lf
+*.png binary
