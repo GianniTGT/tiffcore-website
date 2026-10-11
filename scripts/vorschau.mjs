@@ -13,7 +13,7 @@ const KOEPFE = {
   "Referrer-Policy": "strict-origin-when-cross-origin",
   "Content-Security-Policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
 };
-const TYPEN = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml", ".txt": "text/plain; charset=utf-8", ".png": "image/png" };
+const TYPEN = { ".js": "text/javascript; charset=utf-8", ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml", ".txt": "text/plain; charset=utf-8", ".png": "image/png" };
 
 createServer(async (req, res) => {
   const pfad = decodeURIComponent((req.url ?? "/").split("?")[0]);
