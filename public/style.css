@@ -52,35 +52,43 @@ p { margin: 0; }
 .btn-hell:hover { background: rgba(255, 255, 255, .22); color: #fff; }
 .btn-sm { padding: 10px 20px; font-size: 15px; }
 
-/* Kopfzeile */
-.top { position: sticky; top: 0; z-index: 40; background: rgba(255, 255, 255, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--linie); }
+/* Kopfzeile: dunkles Glas über dem Nachthimmel, bleibt beim Scrollen stehen */
+.top { position: sticky; top: 0; z-index: 40; background: rgba(4, 18, 11, .86); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, .08); }
 .top .wrap { display: flex; align-items: center; gap: 32px; min-height: 72px; }
-.marke { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--tinte); }
+.marke { display: flex; align-items: center; gap: 11px; text-decoration: none; color: #fff; }
 .marke img { width: 40px; height: 40px; border-radius: 11px; }
 .marke strong { font-size: 22px; letter-spacing: -0.03em; }
 .nav { display: flex; gap: 6px; margin-left: 8px; }
-.nav a { padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 15px; color: var(--text); text-decoration: none; }
-.nav a:hover { background: var(--flaeche); color: var(--gruen); }
+.nav a { padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 15px; color: rgba(230, 242, 234, .82); text-decoration: none; }
+.nav a:hover { background: rgba(255, 255, 255, .09); color: #fff; }
 .top-aktion { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+.top .btn-outline { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .35); }
+.top .btn-outline:hover { background: transparent; border-color: #fff; color: #fff; }
+.top .btn-primary { background: var(--gold); color: var(--tinte); box-shadow: 0 8px 20px -8px rgba(201, 160, 83, .7); }
+.top .btn-primary:hover { background: #d6b06a; color: var(--tinte); }
 
-/* Hero */
-.held { position: relative; overflow: hidden; padding: 72px 0 96px; background:
-  radial-gradient(60% 70% at 85% 10%, rgba(201, 160, 83, .22), transparent 70%),
-  radial-gradient(50% 60% at 5% 90%, rgba(30, 130, 80, .14), transparent 70%),
-  linear-gradient(180deg, #f1f8f4 0%, #ffffff 100%); }
-.held .wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
-.pille { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px 7px 8px; border-radius: 999px; background: var(--weiss); border: 1px solid var(--linie); font-weight: 600; font-size: 14px; color: var(--tinte); box-shadow: var(--schatten); }
-.pille i { font-style: normal; background: var(--gruen); color: #fff; border-radius: 999px; padding: 3px 10px; font-size: 12px; letter-spacing: .04em; }
-.held h1 { margin-top: 24px; font-size: clamp(38px, 4.9vw, 60px); font-weight: 800; line-height: 1.04; }
-.marker { background: linear-gradient(transparent 62%, var(--gold-hell) 62%, var(--gold-hell) 92%, transparent 92%); padding: 0 .08em; }
-.held .lead { margin-top: 24px; font-size: 20px; max-width: 29em; color: var(--text); }
+/* Hero: Nachthimmel mit dem Logo aus leuchtenden Punkten (punkte.js) */
+.held { position: relative; overflow: hidden; color: #e6f2ea; border-radius: 0 0 56px 56px; background:
+  radial-gradient(55% 65% at 74% 46%, rgba(30, 130, 80, .42), transparent 72%),
+  radial-gradient(35% 45% at 92% 8%, rgba(201, 160, 83, .2), transparent 70%),
+  radial-gradient(40% 50% at 6% 100%, rgba(43, 108, 176, .2), transparent 70%),
+  #04120b; }
+.held::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 90% at 50% 50%, transparent 58%, rgba(0, 0, 0, .5)); }
+.held .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.12fr; gap: 24px; align-items: center; min-height: min(86vh, 800px); padding-top: 24px; padding-bottom: 48px; }
+.pille { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px 7px 8px; border-radius: 999px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .18); font-weight: 600; font-size: 14px; color: #fff; backdrop-filter: blur(6px); }
+.pille i { font-style: normal; background: var(--gold); color: var(--tinte); border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+.held h1 { margin-top: 24px; color: #fff; font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 1.03; letter-spacing: -0.03em; }
+.held h1 em { font-style: normal; white-space: nowrap; background: linear-gradient(100deg, #f0c871, #5fe3a0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.held .lead { margin-top: 24px; font-size: 20px; max-width: 28em; color: rgba(230, 242, 234, .84); }
 .held .aktionen { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; }
-.haken { list-style: none; margin: 30px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 15px; font-weight: 600; color: var(--tinte); }
+.haken { list-style: none; margin: 30px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 15px; font-weight: 600; color: rgba(230, 242, 234, .92); }
 .haken li { display: flex; align-items: center; gap: 8px; }
-.haken svg { width: 20px; height: 20px; color: var(--gruen); flex: none; }
+.haken svg { width: 20px; height: 20px; color: #5fe3a0; flex: none; }
+.punkte-feld { position: relative; width: 100%; aspect-ratio: 1 / 1; max-width: 740px; margin-left: auto; }
+.punkte-feld canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.punkte-feld noscript img { position: absolute; inset: 12%; width: 76%; height: 76%; border-radius: 18%; }
 
 /* Geräte-Beispiele aus Code */
-.buehne { position: relative; min-height: 470px; }
 .laptop { position: absolute; left: 0; top: 24px; width: 92%; }
 .laptop-schirm { background: #fff; border: 9px solid #17251f; border-bottom-width: 12px; border-radius: 16px 16px 4px 4px; aspect-ratio: 16 / 10.2; overflow: hidden; box-shadow: 0 30px 60px -20px rgba(16, 32, 26, .45); }
 .laptop-fuss { height: 14px; margin: 0 -4%; background: linear-gradient(#cfd6d2, #aeb8b2); border-radius: 0 0 18px 18px; position: relative; }
@@ -126,13 +134,12 @@ p { margin: 0; }
 .s-stift { fill: none; stroke: #1b3f8a; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .knopf-gruen { background: var(--gruen); color: #fff; text-align: center; border-radius: 9px; padding: 8px 6px; font-weight: 700; }
 
-.chip { position: absolute; z-index: 3; display: flex; align-items: center; gap: 9px; padding: 10px 16px 10px 10px; background: #fff; border: 1px solid var(--linie); border-radius: 999px; box-shadow: var(--schatten); font-weight: 700; font-size: 14px; color: var(--tinte); animation: schweben 5s ease-in-out infinite; }
-.chip i { width: 28px; height: 28px; border-radius: 50%; background: var(--gruen-hell); color: var(--gruen); display: grid; place-items: center; }
+.chip { position: absolute; z-index: 3; display: flex; align-items: center; gap: 9px; padding: 10px 16px 10px 10px; background: rgba(8, 30, 20, .72); border: 1px solid rgba(255, 255, 255, .16); border-radius: 999px; backdrop-filter: blur(8px); box-shadow: 0 14px 34px -12px rgba(0, 0, 0, .7); font-weight: 700; font-size: 14px; color: #fff; animation: schweben 5s ease-in-out infinite; }
+.chip i { width: 28px; height: 28px; border-radius: 50%; background: rgba(95, 227, 160, .18); color: #5fe3a0; display: grid; place-items: center; }
 .chip svg { width: 16px; height: 16px; }
-.chip.c1 { left: -2%; bottom: 22%; }
-.chip.c2 { right: 6%; top: 0; animation-delay: -2.5s; }
+.chip.c1 { left: 0; bottom: 13%; }
+.chip.c2 { right: 3%; top: 9%; animation-delay: -2.5s; }
 @keyframes schweben { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-.beispiel { margin-top: 12px; font-size: 12px; color: var(--leise); text-align: center; }
 
 /* Abschnitte */
 section { padding: 96px 0; }
@@ -247,8 +254,8 @@ footer .copy.copy-solo { grid-column: auto; border: 0; margin: 0; padding: 0; }
 .text .stand { color: var(--leise); margin-bottom: 8px; }
 
 @media (max-width: 1020px) {
-  .held .wrap { grid-template-columns: 1fr; gap: 40px; }
-  .buehne { max-width: 640px; margin: 0 auto; width: 100%; }
+  .held .wrap { grid-template-columns: 1fr; gap: 8px; min-height: 0; padding-top: 8px; }
+  .punkte-feld { max-width: 540px; margin: 0 auto; order: -1; }
   .vorteile { grid-template-columns: 1fr 1fr; }
   .reihe { grid-template-columns: 1fr; gap: 40px; }
   .reihe.dreh .bild { order: 0; }
@@ -271,10 +278,10 @@ footer .copy.copy-solo { grid-column: auto; border: 0; margin: 0; padding: 0; }
   .top .wrap { gap: 10px; min-height: 66px; }
   .top-aktion { gap: 8px; }
   .top-aktion .btn { padding: 9px 14px; font-size: 14px; white-space: nowrap; }
-  .held { padding: 44px 0 64px; }
+  .held { border-radius: 0 0 32px 32px; }
   .held .aktionen .btn { flex: 1 1 100%; }
+  .held .wrap { padding-bottom: 36px; }
   .vorteile { grid-template-columns: 1fr; }
-  .buehne { min-height: 380px; }
   .chip { display: none; }
   .handy { width: 38%; min-width: 128px; font-size: 8.5px; }
   .handy-inhalt { padding: 8px; gap: 6px; }

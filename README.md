@@ -3,7 +3,7 @@
 Die Webseite auf **https://tiffcore.ch**: Werbeseite mit Login-Knopf, Impressum und Datenschutz.
 Ein Produkt der Tiff Software Solutions, Bern. Die App selbst (TiffCore, `app.tiffcore.ch`) liegt in einem anderen Repo: `GianniTGT/Handwerk`.
 
-Die Seite besteht aus festen Dateien, ohne Baukasten, ohne Skripte, ohne Cookies und ohne Dateien von fremden Anbietern.
+Die Seite besteht aus festen Dateien, ohne Baukasten, ohne Cookies und ohne Dateien von fremden Anbietern. Einziges Skript ist `public/punkte.js` (das Logo aus leuchtenden Punkten im Kopfbereich), und es kommt von der Seite selbst: Die Sicherheitsrichtlinie erlaubt nur eigene Dateien, kein Skript im HTML.
 
 ## Aufbau
 
