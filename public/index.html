@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_CH">
 <link rel="icon" href="/tiff-logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=2">
+<link rel="stylesheet" href="/style.css?v=3">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -20,12 +20,13 @@
   <div class="wrap">
     <a class="marke" href="/" aria-label="TiffCore, Startseite"><img src="/tiff-logo.svg" alt="" width="40" height="40"><strong>TiffCore</strong></a>
     <nav class="nav" aria-label="Hauptmenü">
-      <a href="#vorteile">Vorteile</a>
-      <a href="#baustelle">Funktionen</a>
-      <a href="#daten">Sicherheit</a>
-      <a href="#fragen">Fragen</a>
+      <a href="/#baustelle">Funktionen</a>
+      <a href="/#preise">Preise</a>
+      <a href="/#support">Support</a>
+      <a href="/#fragen">Fragen</a>
     </nav>
     <div class="top-aktion">
+      <button class="suche-knopf" type="button" aria-label="Suchen" title="Suchen (Taste /)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
       <a class="btn btn-outline btn-sm" href="https://app.tiffcore.ch/login">Login</a>
       <a class="btn btn-primary btn-sm" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
     </div>
@@ -40,32 +41,33 @@
     <div>
       <span class="pille"><i>NEU</i> Software für Haustechnik-Betriebe</span>
       <h1>Vom Rapport auf der Baustelle bis zur <em>QR-Rechnung.</em></h1>
-      <p class="lead">TiffCore verbindet Baustelle und Büro für Sanitär-, Heizungs- und Haustechnik-Betriebe. Der Monteur erfasst am Handy, das Büro verrechnet. Ohne Zettel, ohne doppeltes Abtippen.</p>
+      <p class="lead">Der Monteur erfasst am Handy, das Büro verrechnet. Für Sanitär-, Heizungs- und Haustechnik-Betriebe.</p>
       <div class="aktionen">
         <a class="btn btn-gold" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
         <a class="btn btn-hell" href="https://app.tiffcore.ch/login">Login für Kunden</a>
       </div>
       <ul class="haken">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Daten in Zürich</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Support aus Bern</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Läuft auch ohne Netz</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Ohne Installation</li>
       </ul>
     </div>
-    <div class="punkte-feld" role="img" aria-label="Das TiffCore-Logo aus leuchtenden Punkten, die sich im Raum drehen">
+    <div class="punkte-feld" role="img" aria-label="Das TiffCore-Logo aus leuchtenden Punkten. Klicken lässt die Punkte auseinanderfliegen.">
       <canvas id="punkte"></canvas>
       <noscript><img src="/tiff-logo.svg" alt=""></noscript>
       <div class="chip c2" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></i>Rechnung bezahlt</div>
       <div class="chip c1" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></i>Rapport unterschrieben</div>
     </div>
   </div>
+  <img class="berge" src="/bilder/berge.svg" alt="" width="1440" height="160">
 </div>
 
 <!-- Vorschau der echten Oberfläche -->
 <section class="zeig" id="ueberblick">
   <div class="wrap">
     <div class="sec-kopf">
-      <h2>Ihr Betrieb auf einen Blick</h2>
-      <p>Offene Rechnungen, Aufträge, Aufgaben und Zahlungen: das Dashboard von TiffCore.</p>
+      <h2>Ihr Betrieb auf einen Blick.</h2>
+      <p>Offene Rechnungen, Aufträge und Zahlungen.</p>
     </div>
     <div class="zeig-buehne">
       <figure class="zeig-rahmen">
@@ -80,8 +82,8 @@
 <section id="vorteile">
   <div class="wrap">
     <div class="sec-kopf">
-      <h2>Weniger Büroarbeit, mehr Zeit für den Kunden</h2>
-      <p>TiffCore denkt vom Alltag eines Haustechnik-Betriebs aus: Anlage beim Kunden, Einsatz vor Ort, Rechnung im Büro.</p>
+      <h2>Weniger Büro. Mehr Kunde.</h2>
+      <p>Gedacht vom Alltag eines Haustechnik-Betriebs aus.</p>
     </div>
     <div class="vorteile">
       <div class="karte">
@@ -115,15 +117,11 @@
       <div>
         <span class="eyebrow">Baustelle</span>
         <h2>Der Rapport entsteht vor Ort.</h2>
-        <p class="problem">Zettel gehen verloren, Stunden werden abends aus dem Gedächtnis geschätzt.</p>
         <p class="loesung">Der Monteur erfasst Arbeit und Material direkt am Auftrag. Der Kunde unterschreibt auf dem Bildschirm.</p>
         <ul class="punkte">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Material aus der Artikelliste, der Preis kommt automatisch</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Arbeitszeit mit Stoppuhr oder von Hand</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Fotos vorher und nachher, automatisch verkleinert</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Monteure sehen keine Rechnungen und keine Preise</li>
         </ul>
-        <a class="btn btn-primary" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
       </div>
       <div class="bild">
         <div class="bild-hintergrund">
@@ -139,15 +137,11 @@
       <div>
         <span class="eyebrow">Büro</span>
         <h2>Von der Offerte zur QR-Rechnung, ohne Brüche.</h2>
-        <p class="problem">Dieselben Angaben werden in Offerte, Auftrag und Rechnung immer wieder neu getippt.</p>
         <p class="loesung">Alles baut aufeinander auf. Was einmal erfasst ist, steht in jedem folgenden Dokument.</p>
         <ul class="punkte">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Offerte als PDF oder per E-Mail, mit einem Klick zum Auftrag</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Teilrechnung, Schlussrechnung und Gutschrift</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Mahnwesen mit Zahlungserinnerung und Mahnstufen</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Dokumente in Deutsch, Französisch, Italienisch und Englisch</li>
         </ul>
-        <a class="btn btn-primary" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
       </div>
       <div class="bild">
         <div class="bild-hintergrund">
@@ -195,15 +189,11 @@
       <div>
         <span class="eyebrow">Zahlen</span>
         <h2>Immer wissen, was offen ist.</h2>
-        <p class="problem">Wer bezahlt hat und was überfällig ist, erfährt man erst beim Treuhänder.</p>
         <p class="loesung">Kontoauszug einlesen, die Zahlungen werden den Rechnungen zugeordnet. Das Dashboard zeigt den Stand.</p>
         <ul class="punkte">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Zahlungsabgleich mit camt.053 und CSV, auch Teilzahlungen</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Nachkalkulation: Was bringt ein Auftrag wirklich?</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Buchhaltung mit Journal, MWST, Bilanz und Erfolgsrechnung</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Export für den Treuhänder</li>
         </ul>
-        <a class="btn btn-primary" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
       </div>
       <div class="bild">
         <div class="bild-hintergrund">
@@ -221,8 +211,8 @@
 <section>
   <div class="wrap">
     <div class="sec-kopf">
-      <h2>Alles, was ein Haustechnik-Betrieb braucht</h2>
-      <p>Eine Software statt fünf Programme und ein Ordner voller Excel-Listen.</p>
+      <h2>Alles drin.</h2>
+      <p>Eine Software statt fünf Programme.</p>
     </div>
     <div class="pillen">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Kunden und Anlagen</span>
@@ -236,14 +226,50 @@
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Buchhaltung und MWST</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Rollen und Rechte</span>
     </div>
+  </div>
+</section>
 
-    <div class="ersetzt">
-      <div>
-        <p class="eyebrow">Das ersetzt TiffCore</p>
-        <div class="alt-liste"><span>Rapportzettel</span><span>Excel-Listen</span><span>Offerten in Word</span><span>Mahn-Vorlagen</span><span>Doppelte Eingabe</span></div>
+<!-- Preise -->
+<section id="preise" class="flaeche">
+  <div class="wrap">
+    <div class="sec-kopf">
+      <h2>Einfache Preise.</h2>
+      <p>30 Tage kostenlos testen. Monatlich oder jährlich.</p>
+    </div>
+    <div class="preise-raster drei">
+      <div class="preis-karte">
+        <h3>Basis</h3>
+        <p class="preis"><span>CHF</span> 99<small>pro Monat</small></p>
+        <a class="btn btn-outline" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
       </div>
-      <div class="pfeil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <div class="neu-karte"><b>Eine Software</b><span>Baustelle und Büro in einem System.</span></div>
+      <div class="preis-karte haupt">
+        <h3>Plus</h3>
+        <p class="preis"><span>CHF</span> 189<small>pro Monat</small></p>
+        <a class="btn btn-primary" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
+      </div>
+      <div class="preis-karte">
+        <h3>Pro</h3>
+        <p class="preis"><span>CHF</span> 349<small>pro Monat</small></p>
+        <a class="btn btn-outline" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
+      </div>
+    </div>
+    <p class="preis-hinweis">Eigene Website als Zusatz: + CHF 29 pro Monat.</p>
+  </div>
+</section>
+
+<!-- Support -->
+<section id="support" class="support">
+  <div class="wrap">
+    <div class="stuetze">
+      <span class="eyebrow">Support</span>
+      <h2>Sie sprechen mit uns. Nicht mit einer Hotline.</h2>
+      <p class="lead">Wer TiffCore baut, beantwortet Ihre Fragen. Persönlich, aus Bern.</p>
+      <ul class="support-liste">
+        <li><b>Gemeinsam starten</b><span>Wir richten TiffCore mit Ihnen ein.</span></li>
+        <li><b>Daten mitnehmen</b><span>Kunden und Artikel aus Excel übernehmen.</span></li>
+        <li><b>Direkter Draht</b><span>E-Mail an die Entwickler, nicht an ein Callcenter.</span></li>
+      </ul>
+      <a class="btn btn-gold" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Support">Support kontaktieren</a>
     </div>
   </div>
 </section>
@@ -254,7 +280,7 @@
     <div>
       <span class="eyebrow">Sicherheit</span>
       <h2>Ihre Daten bleiben in der Schweiz.</h2>
-      <p class="lead">Geschäftsdaten sind sensibel. TiffCore läuft auf einem Server in Zürich und nicht in irgendeiner Cloud im Ausland.</p>
+      <p class="lead">Server in Zürich, nicht in einer Cloud im Ausland.</p>
     </div>
     <ul class="daten">
       <li><b>Server in Zürich</b><span>Bei hosttech, einem Schweizer Anbieter</span></li>
@@ -285,10 +311,6 @@
         <p>Ja. Kontakte und Produkte lassen sich aus Excel oder Ihrer bisherigen Software übernehmen. Die Spalten werden automatisch erkannt und vor dem Import angezeigt.</p>
       </details>
       <details>
-        <summary>Was kostet TiffCore?</summary>
-        <p>Das hängt von der Grösse des Betriebs ab. Schreiben Sie uns, wie viele Mitarbeitende Sie haben, dann erhalten Sie ein Angebot.</p>
-      </details>
-      <details>
         <summary>Wer steht hinter TiffCore?</summary>
         <p>Tiff Software Solutions in Bern. Sie sprechen mit den Leuten, die die Software schreiben, und nicht mit einer Hotline.</p>
       </details>
@@ -300,8 +322,8 @@
 <div class="schluss">
   <div class="wrap">
     <div class="schluss-karte">
-      <h2>Möchten Sie TiffCore an Ihrem Betrieb sehen?</h2>
-      <p>Schreiben Sie uns. Wir zeigen die Software an einem Beispiel aus Ihrem Alltag, unverbindlich.</p>
+      <h2>TiffCore an Ihrem Betrieb sehen?</h2>
+      <p>Wir zeigen es an einem Beispiel aus Ihrem Alltag. Unverbindlich.</p>
       <div class="aktionen">
         <a class="btn btn-gold" href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a>
         <a class="btn btn-hell" href="https://app.tiffcore.ch/login">Login</a>
@@ -313,6 +335,7 @@
 </main>
 
 <footer>
+  <img class="berge fuss-berge" src="/bilder/berge.svg" alt="" width="1440" height="160">
   <div class="wrap fuss-grid">
     <div>
       <a class="marke" href="/"><img src="/tiff-logo.svg" alt="" width="40" height="40"><strong>TiffCore</strong></a>
@@ -323,7 +346,8 @@
       <ul>
         <li><a href="https://app.tiffcore.ch/login">Login</a></li>
         <li><a href="mailto:info@tiff-software-solutions.com?subject=TiffCore%20Demo%20anfragen">Demo anfragen</a></li>
-        <li><a href="#fragen">Fragen</a></li>
+        <li><a href="/#preise">Preise</a></li>
+        <li><a href="/#support">Support</a></li>
       </ul>
     </div>
     <div>
@@ -334,10 +358,12 @@
         <li><a href="/datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
-    <p class="copy">© 2026 Tiff Software Solutions · Kasparstrasse 15 · 3027 Bern</p>
+    <p class="copy">© 2026 Tiff Software Solutions · Kasparstrasse 15 · 3027 Bern · Swiss Made</p>
   </div>
 </footer>
 
 <script src="/punkte.js" defer></script>
+<script src="/bewegung.js" defer></script>
+<script src="/suche.js" defer></script>
 </body>
 </html>

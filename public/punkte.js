@@ -7,7 +7,7 @@
   const ctx = canvas.getContext("2d");
   const ruhig = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const schmal = window.matchMedia("(max-width: 700px)").matches;
-  const dichte = schmal ? 0.55 : 1;
+  const dichte = (schmal ? 0.55 : 1) * 1.3; // 30 % mehr Punkte als am Anfang
 
   // Immer dieselbe Form: Zufall mit festem Startwert
   let samen = 11;
@@ -110,6 +110,7 @@
     const q = punkte[punkte.length - 1]; q.sx = q.x; q.sy = q.y; q.sz = q.z; // Staub wird nur eingeblendet
   }
 
+  const start = performance.now();
   // Grösse und Zeiger
   let breite = 0, hoehe = 0, dpr = 1, sichtbar = true, zielX = 0, zielY = 0, mx = 0, my = 0;
   const messen = () => {
@@ -117,6 +118,9 @@
     breite = canvas.clientWidth; hoehe = canvas.clientHeight;
     canvas.width = Math.round(breite * dpr); canvas.height = Math.round(hoehe * dpr);
   };
+  // Klick aufs Logo: die Punkte fliegen auseinander und setzen sich wieder zum T zusammen
+  let knall = -99;
+  canvas.addEventListener("pointerdown", () => { knall = (performance.now() - start) / 1000; });
   window.addEventListener("pointermove", (e) => { zielX = (e.clientX / innerWidth - 0.5) * 2; zielY = (e.clientY / innerHeight - 0.5) * 2; }, { passive: true });
 
   const F = 1150;
@@ -135,6 +139,8 @@
       if (ueberspringe > 1 && p.e !== 2 && i % ueberspringe) continue;
       let k = ruhig ? 1 : klemme((t - p.d) / 1.7, 0, 1);
       k = 1 - Math.pow(1 - k, 3);
+      const seitKnall = t - knall;
+      if (seitKnall < 1.8) k *= 1 - 0.55 * Math.sin(Math.min(seitKnall / 1.8, 1) * Math.PI) * (0.6 + 0.4 * Math.sin(p.ph));
       if (k <= 0.004) continue;
       const wk = p.e === 3 ? 7 : 1.7;
       let x = p.sx + (p.x - p.sx) * k + Math.sin(t * 0.9 + p.ph) * wk;
@@ -161,8 +167,7 @@
     ctx.globalAlpha = 1;
   };
 
-  const start = performance.now();
-  let letzte = 0, summe = 0, anzahl = 0;
+    let letzte = 0, summe = 0, anzahl = 0;
   const schleife = (jetzt) => {
     if (sichtbar) {
       zeichne((jetzt - start) / 1000);
