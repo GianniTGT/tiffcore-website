@@ -42,3 +42,8 @@ git -C /opt/tiffcore-website pull --ff-only
 
 Die einmalige Einrichtung (Kopie anlegen, Adresse einschalten) macht das Skript `deploy/webseite-einschalten.sh` aus dem Repo `GianniTGT/Handwerk`.
 Vorher müssen im DNS Editor von hosttech die Einträge von `tiffcore.ch` und `www.tiffcore.ch` auf den Server zeigen (A-Eintrag auf `185.178.195.35`, kein AAAA-Eintrag). Der Eintrag `mail.tiffcore.ch` darf nicht angefasst werden.
+
+## Preise ändern
+
+Die Preise stehen in `public/preise.json` (basis, plus, pro, website). Auf GitHub die Datei öffnen, auf den Stift klicken,
+die Zahl ändern, «Commit changes» drücken. Nach spätestens 5 Minuten steht der neue Preis auf tiffcore.ch.

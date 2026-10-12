@@ -437,3 +437,4 @@ footer { position: relative; }
 .punkte-feld canvas { cursor: pointer; }
 .held { margin-top: -73px; padding-top: 73px; }
 @media (max-width: 560px) { .held { margin-top: -67px; padding-top: 67px; } }
+.preis b, .preis-hinweis b { font-weight: inherit; }
