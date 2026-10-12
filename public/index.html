@@ -151,23 +151,40 @@
       </div>
       <div class="bild">
         <div class="bild-hintergrund">
-          <div class="beleg" role="img" aria-label="Beispiel einer Rechnung mit QR-Zahlteil">
+          <div class="beleg" role="img" aria-label="Beispiel einer QR-Rechnung von TiffCore mit Empfangsschein und Zahlteil">
             <div class="beleg-kopf">
-              <div><b>Rechnung RE-2026-0087</b><small>Muster Haustechnik AG · 8604 Volketswil</small></div>
-              <img src="/tiff-logo.svg" alt="" width="34" height="34">
+              <div><b>Rechnung RE-2026-0087</b><small>Muster Haustechnik AG · Industriestrasse 12 · 8604 Volketswil</small></div>
+              <span class="beleg-marke" aria-hidden="true">MH</span>
             </div>
+            <div class="beleg-meta"><span>Familie Beispiel<br>Kasparstrasse 15, 3027 Bern</span><span>Datum 12.10.2026<br>Zahlbar bis 11.11.2026</span></div>
             <div class="beleg-zeilen">
-              <div><span>Umwälzpumpe ersetzt, Material</span><span>285.00</span></div>
-              <div><span>Arbeit 2.5 h</span><span>237.50</span></div>
-              <div><span>MWST 8.1 %</span><span>42.30</span></div>
+              <div class="kopf"><span>Leistung</span><span>CHF</span></div>
+              <div><span>Umwälzpumpe Grundfos ersetzt, Material</span><span>285.00</span></div>
+              <div><span>Arbeit 2.5 h à 95.00</span><span>237.50</span></div>
+              <div class="leise"><span>Zwischentotal</span><span>522.50</span></div>
+              <div class="leise"><span>MWST 8.1 %</span><span>42.30</span></div>
               <div class="summe"><span>Total CHF</span><span>564.80</span></div>
             </div>
             <div class="zahlteil">
-              <div><h4>Empfangsschein</h4>CH58 0079 1123 0008 8901 2<br>Familie Beispiel</div>
-              <div>
+              <div class="empfang">
+                <h4>Empfangsschein</h4>
+                <dl><dt>Konto / Zahlbar an</dt><dd>CH44 3199 9123 0008 8901 2<br>Muster Haustechnik AG<br>8604 Volketswil</dd>
+                <dt>Referenz</dt><dd>21 00000 00003 13947 14300 09017</dd>
+                <dt>Zahlbar durch</dt><dd>Familie Beispiel<br>3027 Bern</dd></dl>
+                <div class="betrag"><span><i>Währung</i>CHF</span><span><i>Betrag</i>564.80</span></div>
+              </div>
+              <div class="zahl">
                 <h4>Zahlteil</h4>
-                <svg class="qr" viewBox="0 0 21 21" shape-rendering="crispEdges"><rect width="21" height="21" fill="#fff"/><path fill="#10201a" d="M0 0h7v7H0zM14 0h7v7h-7zM0 14h7v7H0zM1 1v5h5V1zM15 1v5h5V1zM1 15v5h5v-5zM2 2h3v3H2zM16 2h3v3h-3zM2 16h3v3H2zM8 0h2v2H8zM11 1h2v2h-2zM8 4h1v2H8zM10 3h2v2h-2zM8 8h2v2H8zM11 8h3v1h-3zM15 8h2v2h-2zM18 8h3v2h-3zM0 8h3v2H0zM4 9h2v2H4zM8 11h1v3H8zM10 10h2v2h-2zM13 11h2v2h-2zM17 11h2v1h-2zM19 12h2v2h-2zM9 15h2v2H9zM12 14h3v2h-3zM16 14h2v3h-2zM19 16h2v2h-2zM8 18h3v2H8zM12 18h2v3h-2zM15 19h3v2h-3zM19 19h2v2h-2z"/><rect x="8.5" y="8.5" width="4" height="4" fill="#fff"/><path fill="#c4432f" d="M9.5 10h2v1h-2z"/><path fill="#c4432f" d="M10 9.5h1v2h-1z"/></svg>
-                <span class="betrag">Währung CHF · Betrag 564.80<br>Zahlbar bis 30 Tage</span>
+                <div class="zahl-raster">
+                  <div>
+                    <img class="qr" src="/bilder/qr-beispiel.svg" width="92" height="92" alt="">
+                    <div class="betrag"><span><i>Währung</i>CHF</span><span><i>Betrag</i>564.80</span></div>
+                  </div>
+                  <dl><dt>Konto / Zahlbar an</dt><dd>CH44 3199 9123 0008 8901 2<br>Muster Haustechnik AG<br>Industriestrasse 12<br>8604 Volketswil</dd>
+                  <dt>Referenz</dt><dd>21 00000 00003 13947 14300 09017</dd>
+                  <dt>Zusätzliche Informationen</dt><dd>Rechnung RE-2026-0087</dd>
+                  <dt>Zahlbar durch</dt><dd>Familie Beispiel<br>Kasparstrasse 15<br>3027 Bern</dd></dl>
+                </div>
               </div>
             </div>
           </div>

@@ -191,19 +191,31 @@ section { padding: 96px 0; }
 .laptop.frei { position: relative; left: auto; top: auto; width: 100%; }
 
 /* Rechnung mit QR */
-.beleg { background: #fff; border: 1px solid var(--linie); border-radius: 14px; box-shadow: var(--schatten); max-width: 400px; margin: 0 auto; overflow: hidden; font-size: 11.5px; line-height: 1.4; transform: rotate(-1.5deg); }
-.beleg-kopf { display: flex; justify-content: space-between; align-items: flex-start; padding: 22px 22px 14px; }
-.beleg-kopf b { font-size: 15px; color: var(--tinte); display: block; }
-.beleg-kopf small { color: var(--leise); }
+.beleg { background: #fff; border: 1px solid var(--linie); border-radius: 16px; box-shadow: var(--schatten); max-width: 440px; margin: 0 auto; overflow: hidden; font-size: 11.5px; line-height: 1.45; transform: rotate(-1deg); font-variant-numeric: tabular-nums; }
+.beleg-kopf { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 22px 22px 10px; }
+.beleg-kopf b { font-size: 16px; color: var(--tinte); display: block; letter-spacing: -.01em; }
+.beleg-kopf small { color: var(--leise); font-size: 10.5px; }
+.beleg-marke { flex: none; width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: #1f3a5f; color: #fff; font-weight: 800; font-size: 13px; letter-spacing: .02em; }
+.beleg-meta { display: flex; justify-content: space-between; gap: 12px; padding: 0 22px 14px; font-size: 10px; color: var(--leise); }
+.beleg-meta span:last-child { text-align: right; }
 .beleg-zeilen { padding: 0 22px; }
-.beleg-zeilen div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid var(--linie); }
-.beleg-zeilen .summe { font-weight: 800; color: var(--tinte); font-size: 13px; border-top: 2px solid var(--tinte); margin-top: 6px; }
-.zahlteil { margin-top: 18px; border-top: 1.5px dashed #9aa8a0; display: grid; grid-template-columns: 1fr 1.7fr; }
-.zahlteil > div { padding: 14px 16px; }
-.zahlteil > div:first-child { border-right: 1.5px dashed #9aa8a0; font-size: 8px; color: var(--leise); white-space: nowrap; }
-.zahlteil h4 { margin: 0 0 6px; font-size: 11px; color: var(--tinte); }
-.qr { width: 78px; height: 78px; float: left; margin-right: 12px; }
-.zahlteil .betrag { font-size: 10px; clear: both; padding-top: 6px; }
+.beleg-zeilen div { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-top: 1px solid var(--linie); }
+.beleg-zeilen span:last-child { text-align: right; white-space: nowrap; }
+.beleg-zeilen .kopf { border-top: 0; padding-bottom: 5px; font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--leise); }
+.beleg-zeilen .leise { color: var(--leise); }
+.beleg-zeilen .summe { font-weight: 800; color: var(--tinte); font-size: 13.5px; border-top: 2px solid var(--tinte); margin-top: 4px; padding-top: 9px; }
+.zahlteil { margin-top: 18px; border-top: 1.5px dashed #9aa8a0; display: grid; grid-template-columns: 1fr 2fr; font-size: 7.5px; line-height: 1.35; color: #1c1c1e; }
+.zahlteil > div { padding: 12px 12px 14px; min-width: 0; }
+.zahlteil .empfang { border-right: 1.5px dashed #9aa8a0; }
+.zahlteil h4 { margin: 0 0 8px; font-size: 10.5px; font-weight: 800; color: #000; }
+.zahlteil dl { margin: 0; }
+.zahlteil dt { font-weight: 700; font-size: 6.5px; margin-top: 5px; }
+.zahlteil dt:first-child { margin-top: 0; }
+.zahlteil dd { margin: 0; overflow-wrap: anywhere; }
+.zahlteil .betrag { display: flex; gap: 14px; margin-top: 8px; }
+.zahlteil .betrag i { display: block; font-style: normal; font-weight: 700; font-size: 6.5px; }
+.zahl-raster { display: grid; grid-template-columns: 92px 1fr; gap: 12px; }
+.qr { width: 92px; height: 92px; display: block; }
 
 /* Funktionen als Pillen */
 .pillen { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 880px; margin: 0 auto; }
