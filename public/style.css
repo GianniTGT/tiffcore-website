@@ -323,3 +323,119 @@ footer .copy.copy-solo { grid-column: auto; border: 0; margin: 0; padding: 0; }
   .chip { animation: none; }
   .btn { transition: none; }
 }
+
+/* ===== Gestaltung v4: Apple-Ideen, Glas, Bewegung, Suche, Preise, Support, Berge ===== */
+
+/* Überschriften grösser und ruhiger, wie bei Apple */
+.sec-kopf h2, .reihe h2 { letter-spacing: -0.035em; }
+.sec-kopf h2 { font-size: clamp(34px, 5vw, 56px); }
+
+/* Glas: Kopfzeile, Plaketten, heller Knopf im Kopf */
+.top { background: linear-gradient(180deg, rgba(8, 26, 17, .78), rgba(4, 18, 11, .62)); backdrop-filter: blur(20px) saturate(170%); -webkit-backdrop-filter: blur(20px) saturate(170%); }
+.chip, .held .btn-hell, .pille {
+  background: linear-gradient(135deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04));
+  backdrop-filter: blur(18px) saturate(170%); -webkit-backdrop-filter: blur(18px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, .22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 10px 30px -12px rgba(0, 0, 0, .6);
+}
+
+/* Lupe in der Kopfzeile */
+.suche-knopf { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: #fff; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .22); transition: background .15s, transform .15s; }
+.suche-knopf:hover { background: rgba(255, 255, 255, .18); transform: scale(1.06); }
+.suche-knopf svg { width: 19px; height: 19px; }
+
+/* Suchfenster */
+.suche { position: fixed; inset: 0; z-index: 100; background: rgba(4, 18, 11, .45); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); display: flex; justify-content: center; align-items: flex-start; padding: 12vh 16px 16px; animation: einblenden .2s ease; }
+.suche[hidden] { display: none; }
+.suche-fenster { width: min(640px, 100%); background: rgba(255, 255, 255, .92); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, .7); border-radius: 22px; box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .6); overflow: hidden; animation: hochgleiten .25s ease; }
+.suche-feld { display: flex; align-items: center; gap: 12px; padding: 18px 22px; border-bottom: 1px solid var(--linie); }
+.suche-feld svg { width: 22px; height: 22px; color: var(--leise); flex: none; }
+.suche-feld input { flex: 1; border: 0; outline: 0; background: transparent; font: 500 19px/1.3 var(--sans); color: var(--tinte); }
+.suche-treffer { list-style: none; margin: 0; padding: 8px; max-height: 50vh; overflow: auto; }
+.suche-treffer a { display: block; padding: 12px 14px; border-radius: 12px; text-decoration: none; color: var(--text); }
+.suche-treffer a:hover, .suche-treffer a:focus { background: var(--gruen-hell); outline: none; }
+.suche-treffer b { display: block; color: var(--tinte); }
+.suche-treffer span { font-size: 14px; color: var(--leise); }
+.suche-treffer .leer { padding: 14px; color: var(--leise); }
+.suche-tipp { padding: 10px 22px 14px; font-size: 12.5px; color: var(--leise); border-top: 1px solid var(--linie); }
+.suche-offen body { overflow: hidden; }
+@keyframes einblenden { from { opacity: 0; } }
+@keyframes hochgleiten { from { opacity: 0; transform: translateY(16px) scale(.98); } }
+
+/* Kleines leuchtendes Logo über dem Auto */
+.punkte-klein { position: absolute; left: 4%; top: -104px; width: 36%; aspect-ratio: 1; z-index: 2; cursor: pointer; }
+.punkte-klein canvas { width: 100%; height: 100%; display: block; }
+.punkte-klein noscript img { width: 70%; margin: 15%; border-radius: 22%; }
+.held.mit-foto .chip.c2 { right: 2%; left: auto; top: -70px; }
+.held.mit-foto { margin-top: -73px; padding-top: 73px; }
+
+/* Berge: dezente Silhouette (Eiger, Mönch, Jungfrau) */
+.held { position: relative; }
+.berge { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 90px; pointer-events: none; z-index: 1; }
+footer { position: relative; }
+.fuss-berge { top: -1px; bottom: auto; height: 70px; transform: scaleY(-1); opacity: .7; }
+
+/* Preise */
+.preise-raster { display: grid; gap: 22px; max-width: 980px; margin: 0 auto; }
+.preise-raster.zwei { grid-template-columns: 1.15fr 1fr; }
+.preise-raster.drei { grid-template-columns: repeat(3, 1fr); max-width: 1100px; }
+.preis-karte { background: #fff; border: 1px solid var(--linie); border-radius: 28px; padding: 34px 30px; box-shadow: var(--schatten); display: flex; flex-direction: column; transform: var(--kipp, none); transition: transform .35s ease, box-shadow .35s; }
+.preis-karte h3 { font-size: 22px; }
+.preis-karte .preis { margin: 14px 0 6px; font-size: 56px; font-weight: 800; color: var(--tinte); letter-spacing: -0.04em; line-height: 1; }
+.preis-karte .preis span { font-size: 18px; font-weight: 700; color: var(--leise); letter-spacing: 0; margin-right: 4px; }
+.preis-karte .preis small { display: block; margin-top: 8px; font-size: 14px; font-weight: 600; color: var(--leise); letter-spacing: 0; }
+.preis-karte .btn { margin-top: auto; align-self: flex-start; }
+.preis-karte .punkte { margin: 18px 0 26px; }
+.preis-karte.haupt { background: linear-gradient(160deg, #0e4a2b, #062616); color: rgba(255, 255, 255, .86); border-color: transparent; }
+.preis-karte.haupt h3, .preis-karte.haupt .preis { color: #fff; }
+.preis-karte.haupt .preis span, .preis-karte.haupt .preis small { color: var(--gold-hell); }
+.preis-karte.haupt .punkte svg { color: #5fe3a0; }
+.preis-karte.haupt .btn-primary { background: var(--gold); color: var(--tinte); }
+.preis-hinweis { text-align: center; margin-top: 22px; color: var(--leise); font-size: 15px; }
+
+/* Support, deutlich hervorgehoben */
+.support { padding: 40px 0; }
+.stuetze { position: relative; overflow: hidden; border-radius: 36px; padding: 64px 56px; color: rgba(255, 255, 255, .86); background: radial-gradient(60% 90% at 100% 0%, rgba(201, 160, 83, .35), transparent 60%), linear-gradient(135deg, #0e4a2b, #04120b); box-shadow: 0 30px 60px -24px rgba(14, 74, 43, .7); transform: var(--kipp, none); transition: transform .4s ease; }
+.stuetze::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: url("/bilder/berge.svg") bottom / 100% 100% no-repeat; pointer-events: none; }
+.stuetze .eyebrow { color: var(--gold-hell); }
+.stuetze h2 { color: #fff; font-size: clamp(30px, 4.4vw, 50px); font-weight: 800; max-width: 16em; }
+.stuetze .lead { margin-top: 14px; font-size: 20px; }
+.support-liste { list-style: none; margin: 32px 0 34px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; position: relative; z-index: 2; }
+.support-liste li { background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16); border-radius: 18px; padding: 18px 20px; backdrop-filter: blur(10px); }
+.support-liste b { display: block; color: #fff; font-size: 17px; }
+.support-liste span { font-size: 14.5px; color: rgba(255, 255, 255, .72); }
+.stuetze .btn { position: relative; z-index: 2; }
+
+/* Bewegung (nur mit Skript, siehe bewegung.js) */
+.auf { opacity: 0; transform: translateY(28px); transition: opacity .7s ease var(--v, 0ms), transform .7s cubic-bezier(.2, .7, .2, 1) var(--v, 0ms); }
+.auf.da { opacity: 1; transform: var(--kipp, none); }
+.karte, .zeig-rahmen, .rahmen-bild { transform: var(--kipp, none); transition: transform .35s ease, box-shadow .35s ease; }
+.karte:hover, .preis-karte:hover { box-shadow: 0 2px 4px rgba(16, 32, 26, .06), 0 28px 50px -16px rgba(16, 32, 26, .3); }
+.btn { position: relative; overflow: hidden; }
+.btn:active { transform: scale(.96); }
+.welle { position: absolute; left: var(--x); top: var(--y); width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: rgba(255, 255, 255, .55); pointer-events: none; animation: welle .65s ease-out forwards; }
+@keyframes welle { to { transform: scale(28); opacity: 0; } }
+.pillen span { transition: transform .2s, border-color .2s; }
+.pillen span:hover { transform: translateY(-3px); border-color: var(--gruen); }
+
+@media (max-width: 1020px) {
+  .preise-raster.zwei, .preise-raster.drei { grid-template-columns: 1fr; max-width: 520px; }
+  .support-liste { grid-template-columns: 1fr; }
+  .stuetze { padding: 48px 26px; }
+  .punkte-klein { position: relative; top: 0; left: 0; width: 46%; margin: 0 auto; }
+}
+@media (max-width: 760px) {
+  .top .suche-knopf { width: 36px; height: 36px; }
+}
+@media (max-width: 560px) {
+  .top-aktion .btn-primary { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auf { opacity: 1; transform: none; transition: none; }
+  .suche, .suche-fenster, .welle { animation: none; }
+}
+.punkte-feld canvas { cursor: pointer; }
+.held { margin-top: -73px; padding-top: 73px; }
+@media (max-width: 560px) { .held { margin-top: -67px; padding-top: 67px; } }
+.preis b, .preis-hinweis b { font-weight: inherit; }
+.preis-hinweis b { font-weight: 700; }
