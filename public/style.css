@@ -421,7 +421,8 @@ footer { position: relative; }
 .pillen span:hover { transform: translateY(-3px); border-color: var(--gruen); }
 
 @media (max-width: 1020px) {
-  .preise-raster.zwei, .preise-raster.drei { grid-template-columns: 1fr; max-width: 520px; }
+  .preise-raster.drei { max-width: none; gap: 14px; }
+  .preise-raster.zwei { grid-template-columns: 1fr; max-width: 520px; }
   .support-liste { grid-template-columns: 1fr; }
   .stuetze { padding: 48px 26px; }
   .punkte-klein { position: relative; top: 0; left: 0; width: 46%; margin: 0 auto; }
@@ -441,3 +442,17 @@ footer { position: relative; }
 @media (max-width: 560px) { .held { margin-top: -67px; padding-top: 67px; } }
 .preis b, .preis-hinweis b { font-weight: inherit; }
 .preis-hinweis b { font-weight: 700; }
+
+/* Preise am Handy: drei Kacheln nebeneinander wie am PC, nur kleiner */
+@media (max-width: 760px) {
+  .preise-raster.drei { gap: 8px; }
+  .preise-raster.drei .preis-karte { padding: 16px 10px; border-radius: 18px; }
+  .preise-raster.drei .preis-karte h3 { font-size: 15px; }
+  .preise-raster.drei .preis-karte .preis { margin: 8px 0 4px; font-size: 27px; }
+  .preise-raster.drei .preis-karte .preis span { display: block; font-size: 11px; margin: 0 0 2px; }
+  .preise-raster.drei .preis-karte .preis small { font-size: 10.5px; margin-top: 4px; line-height: 1.3; }
+  .preise-raster.drei .preis-karte .punkte { margin: 10px 0 14px; gap: 7px; }
+  .preise-raster.drei .preis-karte .punkte li { font-size: 11.5px; gap: 4px; line-height: 1.3; hyphens: manual; }
+  .preise-raster.drei .preis-karte .punkte svg { width: 12px; height: 12px; margin-top: 1px; }
+  .preise-raster.drei .preis-karte .btn { align-self: stretch; padding: 9px 6px; font-size: 11.5px; line-height: 1.2; white-space: normal; text-align: center; justify-content: center; }
+}
