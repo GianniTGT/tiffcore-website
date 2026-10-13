@@ -56,8 +56,8 @@
     d -= h; t = d / r; return [x0 + r - Math.cos(t) * r, y0 + r - Math.sin(t) * r];
   };
 
-  // 1. Rand: drei Linien ineinander, leicht wellig, nicht ganz gerade
-  [[0, 700, 1.7], [1, 400, 1.25], [2, 230, 1.0]].forEach(([k, n, gr]) => {
+  // 1. Rand: drei Linien ineinander, leicht wellig, nicht ganz gerade (30 % mehr Lichter, 13.10.2026)
+  [[0, 910, 1.7], [1, 520, 1.25], [2, 300, 1.0]].forEach(([k, n, gr]) => {
     const einzug = 6 + k * 24, radius = 100 - einzug * 0.55;
     const n2 = Math.round(n * dichte);
     for (let i = 0; i < n2; i++) {
