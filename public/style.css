@@ -72,6 +72,8 @@ p { margin: 0; }
   radial-gradient(55% 65% at 74% 46%, rgba(30, 130, 80, .42), transparent 72%),
   radial-gradient(35% 45% at 92% 8%, rgba(201, 160, 83, .2), transparent 70%),
   radial-gradient(40% 50% at 6% 100%, rgba(43, 108, 176, .2), transparent 70%),
+  linear-gradient(180deg, rgba(4, 18, 11, .87) 0%, rgba(4, 18, 11, .78) 55%, rgba(4, 18, 11, .62) 100%),
+  url("/bilder/gotthard.webp") center bottom / cover no-repeat,
   #04120b; }
 .held::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 90% at 50% 50%, transparent 58%, rgba(0, 0, 0, .5)); }
 .held .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.12fr; gap: 24px; align-items: center; min-height: min(86vh, 800px); padding-top: 24px; padding-bottom: 48px; }
@@ -396,7 +398,7 @@ footer { position: relative; }
 /* Support, deutlich hervorgehoben */
 .support { padding: 40px 0; }
 .stuetze { position: relative; overflow: hidden; border-radius: 36px; padding: 64px 56px; color: rgba(255, 255, 255, .86); background: radial-gradient(60% 90% at 100% 0%, rgba(201, 160, 83, .35), transparent 60%), linear-gradient(135deg, #0e4a2b, #04120b); box-shadow: 0 30px 60px -24px rgba(14, 74, 43, .7); transform: var(--kipp, none); transition: transform .4s ease; }
-.stuetze::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: url("/bilder/berge.svg") bottom / 100% 100% no-repeat; pointer-events: none; }
+.stuetze::after { content: ""; position: absolute; inset: 0; background: url("/bilder/gotthard.webp") center bottom / cover no-repeat; opacity: .24; mix-blend-mode: luminosity; pointer-events: none; }
 .stuetze .eyebrow { color: var(--gold-hell); }
 .stuetze h2 { color: #fff; font-size: clamp(30px, 4.4vw, 50px); font-weight: 800; max-width: 16em; }
 .stuetze .lead { margin-top: 14px; font-size: 20px; }
