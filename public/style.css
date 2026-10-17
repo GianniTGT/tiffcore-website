@@ -155,6 +155,7 @@ p { margin: 0; }
 .zuschnitt { position: relative; aspect-ratio: 839 / 770; overflow: hidden; border-radius: 16px; }
 .zuschnitt img { position: absolute; width: 257.4%; max-width: none; height: auto; left: -151.4%; top: -45.8%; }
 .handy-bild { display: block; width: 100%; height: auto; }
+.zeig-video { display: block; width: 100%; height: auto; border-radius: 14px; background: #fff; }
 .beispiel { margin-top: 14px; font-size: 12.5px; color: var(--leise); text-align: center; }
 
 /* Abschnitte */
