@@ -4,7 +4,7 @@
   "use strict";
   const knopf = document.querySelector(".suche-knopf");
   if (!knopf) return;
-  const SEITEN = ["/", "/impressum.html", "/datenschutz.html"];
+  const SEITEN = ["/", "/agb.html", "/impressum.html", "/datenschutz.html"];
   // Text eines Blocks mit Leerzeichen zwischen den Elementen (textContent klebt sonst «59» und «pro Monat» zusammen)
   const textVon = (el) => { const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); const teile = []; while (w.nextNode()) teile.push(w.currentNode.nodeValue); return teile.join(" ").replace(/\s+/g, " ").trim(); };
   const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
