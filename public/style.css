@@ -479,3 +479,7 @@ footer { position: relative; }
   .vergleich table { font-size: 13px; }
   .vergleich th, .vergleich td { padding: 8px 4px; }
 }
+
+/* Fuss: Vertrauenszeichen «Server in der Schweiz» (wahr: hosttech, Zürich) */
+footer .copy .schweiz { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; color: rgba(255, 255, 255, .72); }
+footer .copy .schweiz svg { flex: none; }
