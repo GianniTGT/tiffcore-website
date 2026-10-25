@@ -395,6 +395,13 @@ footer { position: relative; }
 .preis-karte.haupt .punkte svg { color: #5fe3a0; }
 .preis-karte.haupt .btn-primary { background: var(--gold); color: var(--tinte); }
 .preis-hinweis { text-align: center; margin-top: 22px; color: var(--leise); font-size: 15px; }
+/* Einführungspreis: alter Preis durchgestrichen über dem neuen, Band «Am beliebtesten», Hinweis unter dem Titel */
+.preis-alt { margin: 12px 0 -6px; font-size: 15px; font-weight: 600; color: var(--leise); }
+.preis-alt s { text-decoration-thickness: 2px; }
+.preis-karte.haupt .preis-alt { color: rgba(255, 255, 255, .7); }
+.preis-karte { position: relative; }
+.preis-band { position: absolute; top: -13px; left: 30px; background: var(--gold); color: var(--tinte); font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
+.preis-aktion { display: inline-block; margin-top: 14px; padding: 8px 16px; border-radius: 999px; background: #e7f4ec; color: #0e4a2b; font-size: 15px; font-weight: 600; }
 
 /* Support, deutlich hervorgehoben */
 .support { padding: 40px 0; }
@@ -448,6 +455,9 @@ footer { position: relative; }
 @media (max-width: 760px) {
   .preise-raster.drei { gap: 8px; }
   .preise-raster.drei .preis-karte { padding: 16px 10px; border-radius: 18px; }
+  .preise-raster.drei .preis-alt { margin: 6px 0 -2px; font-size: 10.5px; }
+  .preise-raster.drei .preis-band { top: -9px; left: 50%; transform: translateX(-50%); font-size: 9.5px; padding: 2px 7px; white-space: nowrap; }
+  .preis-aktion { font-size: 13px; padding: 6px 12px; border-radius: 14px; }
   .preise-raster.drei .preis-karte h3 { font-size: 15px; }
   .preise-raster.drei .preis-karte .preis { margin: 8px 0 4px; font-size: 27px; }
   .preise-raster.drei .preis-karte .preis span { display: block; font-size: 11px; margin: 0 0 2px; }
