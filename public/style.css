@@ -496,3 +496,4 @@ footer .copy .schweiz { display: inline-flex; align-items: center; gap: 6px; mar
 footer .copy .schweiz svg { flex: none; }
 /* Funktion vorgesehen, aber noch nicht nutzbar */
 .vergleich small.bald { margin-left: 6px; padding: 2px 8px; border-radius: 999px; background: #eef1ef; color: var(--leise); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.preis-jahr { margin-top: 8px; color: var(--leise); font-size: 15px; font-weight: 600; }
