@@ -45,5 +45,6 @@ Vorher müssen im DNS Editor von hosttech die Einträge von `tiffcore.ch` und `w
 
 ## Preise ändern
 
-Die Preise stehen in `public/preise.json` (basis, plus, pro, website). Auf GitHub die Datei öffnen, auf den Stift klicken,
-die Zahl ändern, «Commit changes» drücken. Nach spätestens 5 Minuten steht der neue Preis auf tiffcore.ch.
+Die Preise kommen aus TiffCore (https://app.tiffcore.ch/api/preise): Gepflegt werden sie nur noch im Betreiber-Bereich unter
+«Pakete» (Preis, Normalpreis, Aktion bis). So stehen in der App und auf tiffcore.ch immer dieselben Zahlen.
+`public/preise.json` ist nur der Rückfall, falls TiffCore einmal nicht antwortet; beim Ändern der Preise auch dort nachführen.
